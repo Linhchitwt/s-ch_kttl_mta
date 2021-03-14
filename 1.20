@@ -18,4 +18,4 @@ int main (){
     }
     cout <<"co tat ca "<<t<<" bo"<<endl;
 }
-//viết ct cho phép tìm tất cả các bộ số 3 số a,b,c là số tự nhiên trong đó a<=b<=c<=n; viết các kết quả đó ra với n là số tự nhiên nhập từ bàn phím
+
