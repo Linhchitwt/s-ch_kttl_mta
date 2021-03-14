@@ -1,0 +1,21 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main (){
+    int n,t=0,a,b;
+    float c;
+    cout << "nhap vao so n = ";
+    cin >> n;
+    cout << "cac bo so la : "<<endl;
+    for (int a=0; a<= n; a++){
+        for (b = a+1 ; b <= n; b++){
+            c = pow((a*a + b*b),1/2);
+             if (c == (int)c && b<=c ){
+                 t++;
+                 cout << a <<" "<<b <<" "<<c<<endl; 
+             }
+        }
+    }
+    cout <<"co tat ca "<<t<<" bo"<<endl;
+}
+//viết ct cho phép tìm tất cả các bộ số 3 số a,b,c là số tự nhiên trong đó a<=b<=c<=n; viết các kết quả đó ra với n là số tự nhiên nhập từ bàn phím
