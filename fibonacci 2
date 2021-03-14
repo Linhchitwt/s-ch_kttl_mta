@@ -1,0 +1,35 @@
+//in ra day fibonacci voi n so duoc nhap tu ban phim
+#include <iostream>
+#include <math.h>
+using namespace std;
+int day(int n){
+    int k1, k2, k3;
+    k1 = 0;
+    k2 = 1;
+    k3 = 1;
+    int t= 3;
+    for (int i = 2; i <= n; i++)
+      {  k1 = k2;
+        k2 = k3;
+        k3 = k1 + k2;
+      }
+      return k3;
+}
+int main () {
+    int  t, n, k3;
+    cout << "nhap vao so tu nhien n = ";
+    cin >> n;
+     if (n <= 0)
+    {
+        cout << "khong ton tai so nao";
+    }
+    else if (n == 1 || n == 2) {
+        cout << "f = 1";
+    }
+    else  {
+        cout << "f = 0 1 1 ";
+        for (int i = 2; i <= n; i++)
+      {  k3 = day(i);
+        cout << k3 << " " ;
+    }
+}}
