@@ -1,0 +1,32 @@
+#include <iostream>
+#include <math.h>
+ 
+ using namespace std;
+ int uoc(int k, int &sum){
+     sum = 0;
+     for (int i = 1; i <= k ; i++){
+         if (k % i == 0){
+             sum += i;
+         }
+     }
+     return sum;
+ }
+ int main() {
+     int P, Q, sum, t=0;
+     cout << "nhap vao P = ";
+     cin >> P;
+     cout <<"nhap vao Q = ";
+     cin >> Q;
+        cout << " cac cap so huu nghi trong khoang ("<< P <<","<<Q<<")" <<" la : ";
+        for (int a = P; a<= Q; a++)
+            {
+                for (int b = P; b <= Q; b++){
+                    if(uoc(a,sum)==b || uoc(b, sum)==a)
+                    {
+                        cout << "("<<a<<","<<b<<")"<<" ";
+                        t++;
+                    }
+                }
+            } 
+            cout << endl<< " Co "<<t<<" cap thoa man";      
+ }
