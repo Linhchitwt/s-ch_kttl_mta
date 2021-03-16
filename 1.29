@@ -1,0 +1,29 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int ktra (int a){
+    int h,t, k =0;
+    h = a*a;
+    while (h >0)
+    {
+       t = h%10; 
+       k = k*10+t;
+       h = h/10;
+    }
+    return k;
+}
+int main (){
+    int m,n, u=0,h;
+    cout <<"nhap vao khoang (m,n) : ";
+    cin >>m>>n;
+    cout <<"cac so Palindrom la : ";
+    for (int a = m ; a<= n; a++){
+        h = a*a;
+        if (ktra(a) == h)
+        {
+            cout << a <<" ";
+            u++;
+        }
+    }
+    cout <<endl<< "Co "<<u<<" so la palindrom";
+}
