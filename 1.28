@@ -1,0 +1,34 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int ktra(int a){
+     int s=0;
+    while (a > 0){
+        a = a/10;
+        s++;
+    }
+        return s;
+}
+int amstrong(int a){
+    int m,s, t;
+   int sum = 0;
+    m = ktra(a);
+     while (a > 0){
+        t = a % 10;
+        a = a/10;
+        sum += pow(t,m) ;
+     }
+     return sum;
+}
+int main () {
+    int m,n, co=0;
+    cout <<"Nhap vao khoang (m,n) can kiem tra : ";
+    cin>> m >> n;
+    cout <<" Cac so amstrong la : ";
+    for (int a = m; a <= n; a++){
+        if ( amstrong(a) == a){ co++;
+        cout << a <<" ";
+        }
+    }
+    cout<<endl<<"Co tat ca "<<co<<" so thoa man";
+}
